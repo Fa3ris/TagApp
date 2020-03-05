@@ -1,0 +1,182 @@
+<html>
+            <head>
+                <title>Accueil | Colissimo</title>
+                <link rel="stylesheet" type="text/css" href="css/system.base.css">
+                <link rel="stylesheet" type="text/css" href="css/laposte_c8_compteurnotif.css">
+                <link rel="stylesheet" type="text/css" href="css/styles.css">
+                <link rel="stylesheet" type="text/css" href="css/system.theme.css">
+                <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+                <link rel="stylesheet" type="text/css" href="css/style.css">
+                <script type="text/javascript">
+                    window.onload = function exampleFunction() {
+                        var $codeApp = "[[CODE_APP]]";
+                        $arrayApps = [];
+                        $arrayApps["appli-colissimobox"] = ["COLISHIP", "OSC", "CMD", "FO_PUDO", "WS_TRACKING_CHARGEUR", "BO_NAD", "SO_MOBILE", "INET", "AFFRANCHISSEMENT_RETOUR", "COLLECTE_REGULIERE", "COLLECTE_ONDEMAND", "ANNONCECOLIS", "CALCULATEURCO2", "ETATCOLIS", "ACCOMP_NURSING", "ACCOMP_COCOONING"];
+                        $arrayApps["mon-compte"] = ["CONDITIONS_TARIFAIRES", "FACTURES", "GESTION"];
+                        for (var $highlightClass in $arrayApps) {
+                            for (var $index in $arrayApps[$highlightClass]) {
+                                if ($codeApp == $arrayApps[$highlightClass][$index]) {
+                                    element = document.getElementsByClassName($highlightClass);
+                                    element[0].classList.add("current");
+                                }
+                            }
+                        }
+                    }
+                </script>
+            </head>
+            <body>
+                <div id="skip-link">
+                    <a href="#main-content" class="element-invisible element-focusable">Aller au contenu principal</a>
+                </div>
+
+                <div id="oldbrowser" class="orange-gradient" style="display: none;">
+                    <p>Vous utilisez un navigateur qui ne vous permet pas de visualiser le contenu
+                    de notre site web de façon optimale.
+                    La version de votre navigateur est incompatible avec certaines
+                    fonctionnalités de votre espace client Colissimo.
+                    Pour exploiter toutes les possibilités que vous offre votre espace, nous
+                    vous conseillons de mettre à jour votre navigateur
+                    ou d’installer une version plus récente.</p>
+                </div>
+
+                <div id="cookie" class="blue-gradient">
+                    <p>En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de
+                    cookies nous permettant de suivre votre navigation et de vous proposer des
+                    contenus adaptés à vos centres d'intérêts ainsi que de réaliser des
+                    statistiques de visites. <a href="https://exploit-portail-colis-sdev.apps.paas.dev.net-courrier.extra.laposte.fr/fr/cgu">En savoir plus</a><span
+                      id="close-cookie"></span></p>
+                    <p></p>
+                </div>
+                <div class="wrapper">
+                    <!-- Menu du groupe -->
+                    <!-- Header -->
+                    <header class="header">
+                        <div class="headerInner">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul id="evitement">
+                                        <li><a href="#menu" tabindex="1">Aller au menu</a></li>
+                                        <li><a href="#recherche" tabindex="2">Aller à la recherche</a></li>
+                                        <li><a href="#contenu" tabindex="3">Aller au contenu</a></li>
+                                    </ul>
+
+                                    <!-- 3.1 Logo -->
+                                    <div class="logoContainer">
+                                        <a class="logo" href="https://exploit-portail-colis-sdev.apps.paas.dev.net-courrier.extra.laposte.fr/fr">
+                                            <img src="images/logoColissimo.png"
+                                                 alt="Colissimo - Une livraison neutre en CO2">
+                                            <h1 class="hidden-xs">
+                                                &nbsp;<br>&nbsp; </h1>
+                                        </a>
+                                    </div>
+                                    <div class="headerActions">
+
+                                        <!-- 3.2 Langues -->
+                                        <nav class="langSelector">
+                                            <button type="button" class="langSelectorButton collapsed" href="#langList"
+                                                    data-toggle="collapse" aria-expanded="false">
+                                                <span class="chosenLang">FR</span>
+                                                <span class="glyphicon glyphicon-triangle-bottom"></span>
+                                            </button>
+                                            <ul class="collapse" id="langList" onchange="javascript:changeLang();"
+                                                aria-expanded="false">
+                                                <li>
+                                                    <a class="langSelect" data-lang="fr" href="javascript:;">FR</a>
+                                                </li>
+                                                <li>
+                                                    <a class="langSelect" data-lang="en" href="javascript:;">EN</a>
+                                                </li>
+                                                <li>
+                                                    <a class="langSelect" data-lang="de" href="javascript:;">DE</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+
+                                        <!-- 3.3 Connexions -->
+                                        <a type="button" class="loginButton" id="logoutButton" href="https://exploit-portail-colis-sdev.apps.paas.dev.net-courrier.extra.laposte.fr/fr/user/logout">
+                                            <span class="glyphicon glyphicon-log-out visible-xs"></span>
+                                            <span class="hidden-xs">Déconnexion</span>
+                                        </a>
+                                        <div class="visible-xs"></div>
+                                        <!-- 3.4 Recherche -->
+                                        <div class="searchBlock">
+                                            <div class="searchBlockInner">
+                                                <form action="https://exploit-portail-colis-sdev.apps.paas.dev.net-courrier.extra.laposte.fr/fr/recherche" method="post" accept-charset="utf-8" id="recherche">
+                                                    <span>Recherche</span>
+                                                    <input type="text" name="search-site" id="searchBlock" title="Recherche">
+                                                    <button id="btnRechercheMenuOK" type="submit" class="searchButton"
+                                                            title="Lancer votre recherche sur le site">OK
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="userLogged">
+                                <b>[[entreprise]]</b>
+                                | [[code_client]] [[nom_complet]]
+                            </div>
+                        </div>
+                    </header>
+                    <div class="loggedInMenuContainer">
+                        <div class="loggedInMenuInner">
+                            <a class="burgerMenuButton visible-xs" data-toggle="collapse" href="#loggedInMenu">
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <nav class="loggedInMenu collapse" id="loggedInMenu">
+                                <ul><li class="notre-expertise columns5 col-sm-2">
+                                   <div class="notre-expertise info-notif-wrapper info-notif" style="display:none;">
+                                        <div class="notre-expertise info-notif-info" ></div>
+                                        <p class="notre-expertise info-alert-notif-text" style="display:none;color:#740a53;font-weight:bold;">
+                                            <i class="fa fa-info"></i>
+                                        </p>
+                                   </div>
+                                   <div class="notre-expertise info-notif-wrapper alert-notif-info" style="display:none;">
+                                        <div class="notre-expertise info-notif-info" s></div> <p class="info-alert-notif-text" >!</p>
+                                   </div><a href="https://exploit-portail-colis-sdev.apps.paas.dev.net-courrier.extra.laposte.fr/fr/notre-expertise">NOTRE EXPERTISE</a></li><li class="offre-entreprise columns5 col-sm-2">
+                                   <div class="offre-entreprise info-notif-wrapper info-notif" style="display:none;">
+                                        <div class="offre-entreprise info-notif-info" ></div>
+                                        <p class="offre-entreprise info-alert-notif-text" style="display:none;color:#740a53;font-weight:bold;">
+                                            <i class="fa fa-info"></i>
+                                        </p>
+                                   </div>
+                                   <div class="offre-entreprise info-notif-wrapper alert-notif-info" style="display:none;">
+                                        <div class="offre-entreprise info-notif-info" s></div> <p class="info-alert-notif-text" >!</p>
+                                   </div><a href="https://exploit-portail-colis-sdev.apps.paas.dev.net-courrier.extra.laposte.fr/fr/offre-entreprise">OFFRES ET TARIFS</a></li><li class="international columns5 col-sm-2">
+                                   <div class="international info-notif-wrapper info-notif" style="display:none;">
+                                        <div class="international info-notif-info" ></div>
+                                        <p class="international info-alert-notif-text" style="display:none;color:#740a53;font-weight:bold;">
+                                            <i class="fa fa-info"></i>
+                                        </p>
+                                   </div>
+                                   <div class="international info-notif-wrapper alert-notif-info" style="display:none;">
+                                        <div class="international info-notif-info" s></div> <p class="info-alert-notif-text" >!</p>
+                                   </div><a href="https://exploit-portail-colis-sdev.apps.paas.dev.net-courrier.extra.laposte.fr/fr/international">INTERNATIONAL</a></li><li class="appli-colissimobox columns5 col-sm-2">
+                                   <div class="appli-colissimobox info-notif-wrapper info-notif" style="display:none;">
+                                        <div class="appli-colissimobox info-notif-info" ></div>
+                                        <p class="appli-colissimobox info-alert-notif-text" style="display:none;color:#740a53;font-weight:bold;">
+                                            <i class="fa fa-info"></i>
+                                        </p>
+                                   </div>
+                                   <div class="appli-colissimobox info-notif-wrapper alert-notif-info" style="display:none;">
+                                        <div class="appli-colissimobox info-notif-info" s></div> <p class="info-alert-notif-text" >!</p>
+                                   </div><a href="https://exploit-portail-colis-sdev.apps.paas.dev.net-courrier.extra.laposte.fr/fr/appli-colissimobox">APPLICATIONS</a></li><li class="mon-compte columns5 col-sm-2">
+                                   <div class="mon-compte info-notif-wrapper info-notif" style="display:none;">
+                                        <div class="mon-compte info-notif-info" ></div>
+                                        <p class="mon-compte info-alert-notif-text" style="display:none;color:#740a53;font-weight:bold;">
+                                            <i class="fa fa-info"></i>
+                                        </p>
+                                   </div>
+                                   <div class="mon-compte info-notif-wrapper alert-notif-info" style="display:none;">
+                                        <div class="mon-compte info-notif-info" s></div> <p class="info-alert-notif-text" >!</p>
+                                   </div><a href="https://exploit-portail-colis-sdev.apps.paas.dev.net-courrier.extra.laposte.fr/fr/mon-compte">MON COMPTE</a></li></ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- 3.4 Menu panoptique -->
+                    <!-- /.container-fluid, /#main -->
+                </div>
+            </body>
+        </html>"

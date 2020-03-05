@@ -17,14 +17,28 @@
         <path>/META-INF/tags/header.tag</path>
     </tag-file>
     
+    <tag-file>
+        <description>
+            Insère les liens CSS du header
+        </description>
+        <name>header-css</name>
+        <path>/META-INF/tags/header_css.tag</path>
+    </tag-file>
+    
     <tag>
     	<name>messagetag</name>
     	<tag-class>fr.cbox.poc.customtags.MessageTag</tag-class>
-    	<body-content>JSP</body-content>
+    	<body-content>scriptless</body-content>
     	<attribute>
     		<name>message</name>
     		<required>false</required>
     	</attribute>
+    </tag>
+    
+    <tag>
+    	<name>headertag</name>
+    	<tag-class>fr.cbox.poc.customtags.HeaderTag</tag-class>
+    	<body-content>empty</body-content>
     </tag>
 
         </taglib>
