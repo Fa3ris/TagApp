@@ -1,0 +1,30 @@
+<taglib
+        xsi:schemaLocation=
+                "http://java.sun.com/xml/ns/javaee web-jsptaglibrary_2_1.xsd"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        version="2.1">
+        
+<!-- identifie de manière unique la taglib -->
+<uri>fr.cbox.poc.tagapp</uri>
+<tlib-version>0.1</tlib-version>
+
+<tag-file>
+        <description>
+            Insère un header
+        </description>
+        <name>header</name>
+        <path>/META-INF/tags/header.tag</path>
+    </tag-file>
+    
+    <tag>
+    	<name>messagetag</name>
+    	<tag-class>fr.cbox.poc.customtags.MessageTag</tag-class>
+    	<body-content>JSP</body-content>
+    	<attribute>
+    		<name>message</name>
+    		<required>false</required>
+    	</attribute>
+    </tag>
+
+        </taglib>
